@@ -6,6 +6,10 @@
 
  * setup system firewall to allow http/https traffic before running any scripts
  * simply choose a setup script for your distribution and run it as root
+ * Example:
+```sh
+    $ curl -s https://raw.githubusercontent.com/Gavin1937/setup-h5ai/master/debian_ubuntu_setup.sh | sudo bash /dev/stdin
+```
  * Script Arguments
 ```sh
     default, no argument input:
