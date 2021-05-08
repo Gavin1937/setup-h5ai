@@ -33,7 +33,7 @@ case "${flag}" in
   
   # get h5ai from my ReleaseBuild archive
   g) 
-	wget https://github.com/Gavin1937/setup-h5ai/blob/master/ReleaseBuild/h5ai-0.30.0.zip
+	wget https://github.com/Gavin1937/setup-h5ai/raw/master/ReleaseBuild/h5ai-0.30.0.zip
 	GITHUB_FLAG=0
   ;;
   
