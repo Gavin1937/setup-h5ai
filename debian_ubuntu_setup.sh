@@ -17,7 +17,7 @@ apt-get update -y
 # installing utilities
 echo ""
 echo "installing utilities"
-apt-get install -y apache2 git wget nodejs npm php php-gd php-imagick zip unzip graphicsmagick ffmpeg
+apt-get install -y apache2 git wget php php-gd php-imagick zip unzip graphicsmagick ffmpeg
 
 # clone h5ai repo from GitHub
 echo ""
@@ -50,6 +50,7 @@ if [ ${GITHUB_FLAG} -ne 0 ]
   then
     echo ""
     echo "building project"
+    apt-get install -y nodejs npm
     cd ./h5ai/
     npm install
     npm run build
