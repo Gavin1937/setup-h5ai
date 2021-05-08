@@ -23,28 +23,26 @@ apt-get install -y apache2 git wget nodejs npm php php-gd php-imagick zip unzip 
 echo ""
 echo "Getting h5ai build"
 GITHUB_FLAG=0
-while getopts og flag
-do
-  case "${flag}" in
-    # get h5ai from original GitHub repository
-    o) 
-	  git clone https://github.com/lrsjng/h5ai.git
-	  GITHUB_FLAG=1
-	;;
-	
-	# get h5ai from my ReleaseBuild archive
-    g) 
-	  wget https://raw.githubusercontent.com/Gavin1937/setup-h5ai/master/ReleaseBuild\h5ai-0.30.0.zip
-	  GITHUB_FLAG=0
-	;;
-	
-	# default, same as -o
-    *) 
-	  git clone https://github.com/lrsjng/h5ai.git
-	  GITHUB_FLAG=1
-	;;
-  esac
-done
+getopts og flag
+case "${flag}" in
+  # get h5ai from original GitHub repository
+  o) 
+	git clone https://github.com/lrsjng/h5ai.git
+	GITHUB_FLAG=1
+  ;;
+  
+  # get h5ai from my ReleaseBuild archive
+  g) 
+	wget https://raw.githubusercontent.com/Gavin1937/setup-h5ai/master/ReleaseBuild\h5ai-0.30.0.zip
+	GITHUB_FLAG=0
+  ;;
+  
+  # default, same as -o
+  *) 
+	git clone https://github.com/lrsjng/h5ai.git
+	GITHUB_FLAG=1
+  ;;
+esac
 
 # building project
 H5AI_PATH=""
