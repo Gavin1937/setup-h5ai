@@ -1,0 +1,3 @@
+[submodule "h5ai"]
+	path = h5ai
+	url = https://github.com/lrsjng/h5ai.git
